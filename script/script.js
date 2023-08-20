@@ -16,20 +16,29 @@ function card(target) {
     const totalPrice = document.getElementById("total-price");
     totalPrice.innerHTML = total;
     const couponBtn = document.getElementById("coupon-btn");
-    if (total <= 200) {
-        couponBtn.disabled = true;
-        couponBtn.background = "black";
 
+    couponBtn.addEventListener("click", function () {
+        const couponCode = document.getElementById("coupon-code").value;
+        const targetCoupon = "SELL200";
+
+        if (couponCode === targetCoupon && total >=200) {
+            couponBtn.style.cursor = "default";
+            couponBtn.style.cursor = "pointer";
+
+            const discountPrice = document.getElementById("discount-price");
+            const discount = total * 0.2;
+            discountPrice.innerText = discount.toFixed(2);
+
+            const totalAmount = document.getElementById("total-amount");
+            const totalCost = total - discount;
+            totalAmount.innerText = totalCost.toFixed(2);
+        }
+    });
+
+
+    if (total < 200 && couponCode.value !== "SELL200") {
         return;
     }
-    else {
-        couponBtn.disabled = false;
-        couponBtn.style.background = "#E527B2";
-        couponBtn.style.cursor = "pointer"
-        const discountPrice = document.getElementById("discount-price");
-        const discount = total / 100 * 20;
-        discountPrice.innerText = discount.toFixed(2);
-        return;
-    }
+
 }
 
