@@ -37,7 +37,6 @@ function card(target) {
     });
     purchaseBtn.addEventListener("click", function () {
     if(total >0){
-        purchaseBtn.style.cursor = "default";
         purchaseBtn.style.cursor = "pointer";
         my_modal_1.showModal();
         const homeBtn = document.getElementById("home-btn");
@@ -47,6 +46,7 @@ function card(target) {
 
         return;
     }
+    
 });
     if (total < 200) {
         couponBtn.style.cursor="not-allowed";
@@ -55,6 +55,14 @@ function card(target) {
     else{
         couponBtn.style.cursor="pointer";
     }
+
+    if (total < 0) {
+        purchaseBtn.style.cursor="not-allowed";
+         
+     }
+     else{
+         purchaseBtn.style.cursor="pointer";
+     }
 
 }
 
