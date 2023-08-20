@@ -13,7 +13,7 @@
   <header>
     <!-- banner section -->
     <div
-      class="flex flex-col-reverse md:flex-col lg:flex-row w-[100%] h-auto md:h-[800px] justify-around items-center bg-[#F9F6E2] pb-4">
+      class="flex flex-col-reverse pb-4 md:flex-col lg:flex-row w-[100%] h-auto md:h-[1000px] lg:h-auto justify-around items-center bg-[#F9F6E2] md:py-6">
       <div class="flex-1 text-center">
         <h1 class="text-black text-[25px] font-medium">---SALE FEVER---</h1>
         <p class="text-black text-[50px] font-bold my-7"><span class="block">Purchase TK 200 or</span> above & get <span
@@ -27,10 +27,10 @@
     </div>
   </header>
   <main class="my-20 w-3/4 mx-auto">
-    <p class="font-semibold text-black text-[30px] mb-4">Kitchenware</p>
+    <p class="font-semibold hidden lg:block text-black text-[30px] mb-4">Kitchenware</p>
     <!-- card section -->
     <div class="flex flex-col lg:flex-row">
-      <div class="grid grid-cols-1 md:grid-cols-2 md:mx-auto lg:grid-cols-3 gap-y-6 gap-4 flex-1">
+      <div class="grid grid-cols-1 md:grid-cols-2 md:mx-auto lg:grid-cols-3 gap-y-4 lg:gap-y-24 gap-4 flex-1">
         <!-- card one -->
         <div id="card-one" onclick="card(this)" class="card w-80 bg-base-100 shadow-xl">
           <figure class="px-10 pt-10 bg-[#1111110D] pb-4 m-4 ">
@@ -82,6 +82,7 @@
             <p>49.00 TK</p>
           </div>
         </div>
+        <p class="font-semibold hidden lg:block absolute text-black text-[30px] bottom-[-450px] mb-4">Sportswear</p>
         <!-- card four -->
         <div id="card-four" onclick="card(this)" class="card w-80 bg-base-100 shadow-xl">
           <figure class="px-10 pt-10 bg-[#1111110D] pb-4 m-4">
@@ -141,7 +142,7 @@
           <p class="font-medium text-black text-[20px] mb-4">Have coupon?</p>
           <input type="text" name="" id="coupon-code" placeholder="Coupon code" class="h-10 px-4 rounded-l-lg">
           <button id="coupon-btn"
-            class="bg-[#E527B2] cursor-not-allowed  h-10 text-[15px] font-semibold w-[100px] text-white rounded-r-lg">Apply</button>
+            class="bg-[#E527B2] cursor-not-allowed h-10 text-[15px] font-semibold w-[100px] text-white rounded-r-lg">Apply</button>
         </div>
         <div class="mt-5 pl-4 bg-white shadow-xl">
           <ol id="order-list" type="1" class="font-semibold">

@@ -23,7 +23,6 @@ function card(target) {
         const targetCoupon = "SELL200";
 
         if (couponCode === targetCoupon && total >=200) {
-            couponBtn.style.cursor = "default";
             couponBtn.style.cursor = "pointer";
             const discountPrice = document.getElementById("discount-price");
             const discount = total * 0.2;
@@ -32,6 +31,7 @@ function card(target) {
             const totalAmount = document.getElementById("total-amount");
             const totalCost = total - discount;
             totalAmount.innerText = totalCost.toFixed(2);
+            return;
         }
         
     });
@@ -48,8 +48,12 @@ function card(target) {
         return;
     }
 });
-    if (total < 200 && couponCode.value !== "SELL200") {
-        return;
+    if (total < 200) {
+        couponBtn.style.cursor="not-allowed";
+        
+    }
+    else{
+        couponBtn.style.cursor="pointer";
     }
 
 }
